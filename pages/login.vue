@@ -71,6 +71,24 @@ export default {
         
       })
 
+
+      // cookie 作法
+      // this.$auth.loginWith('cookie', { data:
+      //   {
+      //     phoneNumber: '0900000001',
+      //     password: '!ExamplePassw0rd'
+      //   }
+      // })
+      // .then( res => {
+      //   this.$axios.get(`/users`)
+      //   .then( res => {
+      //     coonsole.log(res)
+      //   })
+      //   .catch(res => {
+      //   })
+      // })
+
+      // local 作法，login 成功自動呼叫 user API
       this.$auth.loginWith('local', { data:
         {
           phoneNumber: '0900000001',
@@ -78,13 +96,6 @@ export default {
         }
       })
 
-      // this.$axios.post(`/auth/login`,{
-      //   phoneNumber: '0900000001',
-      //   password: '!ExamplePassw0rd'
-      // })
-      // this.$router.push({
-      //   path: '/'
-      // })
     }
   }
 }

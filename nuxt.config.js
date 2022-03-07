@@ -58,7 +58,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth'
+    '@nuxtjs/auth-next'
   ],
 
   axios: {
@@ -67,6 +67,29 @@ export default {
 
   auth: {
     strategies: {
+      // cookie 作法
+      // cookie:{
+      //   cookie: {
+      //     name: 'facedk',
+      //   },
+      //   endpoints: {
+      //     login: {
+      //       url: '/auth/login',
+      //       method: 'post'
+      //     },
+      //     logout: {
+      //       url: '/auth/logout',
+      //       method: 'get'
+      //     },
+      //     user: {
+      //       url: '/users',
+      //       method: 'get',
+      //       property: 'data'
+      //     }
+      //   },
+      // },
+    
+      // local 作法
       local: {
         token: {
           required: false,
@@ -86,8 +109,7 @@ export default {
           },
           user: {
             url: '/users',
-            method: 'get',
-            property: 'data'
+            method: 'get'
           }
         },
       },
